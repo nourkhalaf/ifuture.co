@@ -48,63 +48,56 @@ class _FilterHomeState extends State<FilterHome> {
         ],
         backgroundColor: const Color(0xFF1B3944),
       ),
-      body: Container(
-        height: double.infinity,
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              ExpansionTileItem('Product type', productTypes()),
-              ExpansionTileItem('Stock', stock()),
-              ExpansionTileItem('Product rating count', count()),
-              Padding(
-                padding: const EdgeInsets.all(16),
-                child: Row(
-                  children: [
-                    Expanded(
-                      child: ElevatedButton(
-                        onPressed: () {},
-                        style: ButtonStyle(
-                          shape:
-                              MaterialStateProperty.all<RoundedRectangleBorder>(
-                                  RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(6.0),
-                          )),
-                          elevation: MaterialStateProperty.all(0),
-                          padding: MaterialStateProperty.all(
-                              const EdgeInsets.symmetric(
-                                  horizontal: 26, vertical: 13)),
-                          backgroundColor:
-                              MaterialStateProperty.all(Color(0xFF1B3944)),
-                        ),
-                        child: Text(
-                          'Apply',
-                          style: TextStyle(
-                              fontFamily: 'Poppins', fontSize: 16, height: 2),
-                        ),
-                      ),
+      body: ListView(
+        children: [
+          ExpansionTileItem('Product type', productTypes()),
+          ExpansionTileItem('Stock', stock()),
+          ExpansionTileItem('Product rating count', count()),
+          Padding(
+            padding: const EdgeInsets.all(16),
+            child: Row(
+              children: [
+                Expanded(
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    style: ButtonStyle(
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(6.0),
+                      )),
+                      elevation: MaterialStateProperty.all(0),
+                      padding: MaterialStateProperty.all(
+                          const EdgeInsets.symmetric(
+                              horizontal: 26, vertical: 13)),
+                      backgroundColor:
+                          MaterialStateProperty.all(Color(0xFF1B3944)),
                     ),
-                    SizedBox(width: 10),
-                    GestureDetector(
-                      onTap: () {},
-                      child: Container(
-                        padding:
-                            EdgeInsets.symmetric(horizontal: 26, vertical: 13),
-                        decoration: BoxDecoration(
-                          color: Color(0xFFE9ECED),
-                          borderRadius: BorderRadius.circular(6),
-                        ),
-                        child: Icon(
-                          Icons.refresh,
-                          size: 18,
-                        ),
-                      ),
+                    child: Text(
+                      'Apply',
+                      style: TextStyle(
+                          fontFamily: 'Poppins', fontSize: 16, height: 2),
                     ),
-                  ],
+                  ),
                 ),
-              )
-            ],
+                SizedBox(width: 10),
+                GestureDetector(
+                  onTap: () {},
+                  child: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 26, vertical: 13),
+                    decoration: BoxDecoration(
+                      color: Color(0xFFE9ECED),
+                      borderRadius: BorderRadius.circular(6),
+                    ),
+                    child: Icon(
+                      Icons.refresh,
+                      size: 18,
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
-        ),
+        ],
       ),
     );
   }
