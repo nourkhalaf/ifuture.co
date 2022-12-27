@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ifuture_co/widgets/FilterHome.dart';
+import 'package:ifuture_co/widgets/cartHome.dart';
 
 class FiltersScreen extends StatelessWidget {
   const FiltersScreen({super.key});
@@ -23,7 +24,7 @@ class FiltersScreen extends StatelessWidget {
           home: child,
         );
       },
-      child: FilterHome(),
+      child: CartHome(),
     );
   }
 }
