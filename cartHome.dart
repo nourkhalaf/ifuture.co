@@ -21,6 +21,8 @@ class CartHome extends StatelessWidget {
               children: [
                 CartItem(),
                 CartItem(),
+                CartItem(),
+                CartItem(),
               ],
             ),
           ),
