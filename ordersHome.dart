@@ -53,43 +53,46 @@ class OrderItem extends StatelessWidget {
                       width: 78,
                       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgyw5XRKEnv38UkzQkYedZ21N0MmCBjaPI9cXw30anzQ&s'),
                   SizedBox(width: 8),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Gun Sport Relaxation Fitness ',
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 13,
-                            fontFamily: 'Poppins'),
-                        overflow: TextOverflow.clip,
-                      ),
-                      Text('200 in stock',
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Gun Sport Relaxation Fitness ',
+                          maxLines: 3,
+                          softWrap: false,
+                          overflow: TextOverflow.ellipsis,
                           style: TextStyle(
-                              color: Color(0xFF7DCA95),
+                              color: Colors.black,
                               fontSize: 13,
-                              fontFamily: 'Poppins')),
-                      Row(
-                        children: [
-                          Text('99.99\$',
-                              style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 16,
-                                  fontFamily: 'Poppins',
-                                  fontWeight: FontWeight.w600)),
-                          SizedBox(width: 8),
-                          Text('138.00\$',
-                              style: TextStyle(
-                                  color: Color(0xFFE93D38),
-                                  fontSize: 14,
-                                  fontFamily: 'Poppins',
-                                  fontWeight: FontWeight.w500,
-                                  decoration: TextDecoration.lineThrough)),
-                        ],
-                      ),
-                    ],
+                              fontFamily: 'Poppins'),
+                        ),
+                        Text('200 in stock',
+                            style: TextStyle(
+                                color: Color(0xFF7DCA95),
+                                fontSize: 13,
+                                fontFamily: 'Poppins')),
+                        Row(
+                          children: [
+                            Text('99.99\$',
+                                style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 16,
+                                    fontFamily: 'Poppins',
+                                    fontWeight: FontWeight.w600)),
+                            SizedBox(width: 8),
+                            Text('138.00\$',
+                                style: TextStyle(
+                                    color: Color(0xFFE93D38),
+                                    fontSize: 14,
+                                    fontFamily: 'Poppins',
+                                    fontWeight: FontWeight.w500,
+                                    decoration: TextDecoration.lineThrough)),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
-                  Spacer(),
                   Text(
                     '1 week',
                     style: const TextStyle(
@@ -104,6 +107,7 @@ class OrderItem extends StatelessWidget {
         ),
         const Divider(
           thickness: 1,
+          height: 1,
           color: Color(0xFFF2F2F2),
         ),
       ],

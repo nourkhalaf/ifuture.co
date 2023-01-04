@@ -89,6 +89,7 @@ class MyAccountHome extends StatelessWidget {
       children: [
         Divider(
           thickness: 1,
+          height: 1,
           color: Color(0xFFF2F2F2),
         ),
         Padding(
